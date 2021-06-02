@@ -1,0 +1,22 @@
+{
+  "name": "cat-match",
+  "version": "1.0.0",
+  "description": "Find a cat based on your lifestyle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior-Developer-Group/cat-match.git"
+  },
+  "author": "Junior Developer Group",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junior-Developer-Group/cat-match/issues"
+  },
+  "homepage": "https://github.com/Junior-Developer-Group/cat-match#readme",
+  "dependencies": {
+    "dialog-polyfill": "^0.5.6"
+  }
+}
