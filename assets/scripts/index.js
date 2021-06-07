@@ -1,30 +1,15 @@
 const catApi="https://api.thecatapi.com/v1/breeds";
 const allcats=document.getElementById("allcats");
-const formButton=document.querySelector(".formButton");
+const submitButton=document.querySelector(".submitButton");
 const form=document.getElementById("form");
 
-allcats.addEventListener("change", disableInputs);
 
-formButton.addEventListener("click", (e) => {
+
+submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     getUserInputs();
     console.log(userValues);
 })
-
-function disableInputs() {
-    const elements=form.elements;
-    for (element of elements) {
-        if (allcats!==element) {
-            if (allcats.checked==true&&element.type!='submit') {
-                element.disabled=true;
-                form.reset();
-                allcats.checked=true;
-            } else {
-                element.disabled=false;
-            }
-        }
-    }
-};
 
 
 function getUserInputs() {

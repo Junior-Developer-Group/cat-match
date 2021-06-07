@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 
 :root {
@@ -18,38 +19,56 @@ body{
 font-family: 'Poppins', sans-serif;
 }
 
-
-
 #form{
 display: flex;
-flex-wrap:wrap;
+flex-direction:column;
 align-items: center;
-width:80%;
+letter-spacing: 0.01em;;
+width:95%;
 box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-padding: 3rem;
+padding: 1rem;
 margin: auto;
 border-radius: 0.7em;
  
 }
 
+#form section{
+box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
+border-radius: 0.7em;
+width:100%;
+padding:0.5em;
+margin:0.5em;
+}
 
 #form p{
-padding:1em;
 width:100%;
 text-align:center;
-font-size:1.4em;
-font-weight:400;
-margin:0;
+}
+
+.formInstructions{
+font-weight:bold;
+font-size:0.8em;
+}
+.allCatsSection{
+font-size:0.8em;
+}
+
+#form h4{
+text-align:center;
+}
+
+#form h2{
+text-align:center;
 }
 
 #form div{
-width:25%;
+display:flex;
+justify-content:space-between;
+width:100%;
 padding:1em;
+font-size:0.8em;
 }
 
-#form select {
-padding:0.5em;
-}
 
 input[type=checkbox] {
 position: relative;
@@ -59,6 +78,7 @@ padding:1em;
 
 
 input[type=checkbox]:before {
+margin-right:0.5em;
 content: "";
 display: block;
 position: absolute;
@@ -67,6 +87,7 @@ height: 1.28em;
 top: 0;
 left: 0;
 background-color:var(--light-grey);
+border:0.05em solid var(--black);
 }
 
 input[type=checkbox]:checked:before {
@@ -90,23 +111,27 @@ color:var(--white);
 position: absolute; 
 left: 0.3em;  
 }
-
-.formButton{
-width:100%;
-margin:auto;
+.showAllCatsButton{
+text-align:center;
 }
-.formButton button{
+.submitButton{
+text-align:center;
+}
+
+#form button{
+width:80%;
+margin:auto;
 background-color:var(--purple);
 border:none;
 box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
 color:var(--white);
-padding:1em 3em;
+padding:1em 3.5em;
 border-radius: 0.5em;
 transition-duration: 0.4s;
 
 }
 
-.formButton button:hover {
+#form button:hover {
 background-color: var(--light-purple);
 color: var(--white);
 }
@@ -125,59 +150,54 @@ select:hover {
 background-color: var(--light-grey);
 }
 
+@media only screen and (min-width: 48em) {
 
-@media screen and (max-width: 65em){
 #form{
-width:90%;
+
+width:80%;
 padding:2em;
 }
-#form div{
-font-size:0.9em;
-}
-
-}
-
-@media screen and (max-width: 48.5em){
-#form{
-width:90%;
-padding:2em;
-}
-#form div{
-font-size:0.8em;
-}
-
-.allcats{
-text-align:center;
-
-}
-}
-
-
-@media screen and (max-width: 37.5em){
-
-
-#form{
-padding:1em;
-width:100%;
-
-}
-#form div {
-display:flex;
-flex-direction:column;
-justify-content: center;
-align-items:center;
+#form button{
 width:50%;
-padding:0.5em;
-font-size:0.8em;
 }
-#form p{
-font-size:0.8em;
-}
-
-#allcats label{
-text-align:center;
+.formInstructions{
+font-weight:bold;
+font-size:1em;
 }
 
 }
 
+@media only screen and (min-width: 64.5em) {
+#form{
+width:55%;
+padding:3em;
+
+}
+
+#form section{
+padding:1.5em;
+}
+
+#form div{
+font-size:1.2em;
+}
+
+.formInstructions {
+font-size:1.4em;
+}
+
+.allCatsSection{
+font-size:1.2em;
+}
+#form h2{
+font-size:2.2em;
+}
+#form h4{
+font-size:1.3em;
+}
+
+#form button{
+font-size:1.3em;
+}
+}
 

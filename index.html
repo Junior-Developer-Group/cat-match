@@ -15,80 +15,87 @@
 <body>
 
     <form id="form" method="POST" action="">
-        <p>Search for your perfect feline friend using the search form below, where 1=low and 5=high for that particular
-            option.</p>
-        <div>
-            <label for="coatLength">Coat Length</label>
-            <select id="coatLength" name="coatLength">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-        <div>
-            <label for="active">Active</label>
-            <select id="active" name="active">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
+        <h2>Find your perfect feline friend.</h2>
+        <section>
+            <p class="allCatsSection"> I dont want to search, show me all the cat breeds.</p>
+            <div class="showAllCatsButton">
+                <button class="allCatsButton">Show All Cats</button>
+            </div>
+        </section>
+        <p class="formInstructions">Choose your options based on your needs where: 1 = not very and 5 = very </p>
+        <section>
+            <h4>Fitting into your family</h4>
+            <div>
+                <label for="dogFriendly">Dog-friendly</label>
+                <select id="dogFriendly" name="dogFriendly">
+                    <option value="0">0</option>
+                    <option value="1">1- not very</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 - very</option>
+                </select>
+            </div>
+            <div>
+                <label for="hypoallergenic"> Hypoallergenic</label>
+                <input type="checkbox" id="hypoallergenic" name="hypoallergenic">
 
-        <div>
-            <label for="dogFriendly">Dog-friendly</label>
-            <select id="dogFriendly" name="dogFriendly">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="friendly">Friendliness</label>
-            <select id="friendly" name="friendly">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="intelligence">Intelligence</label>
-            <select id="intelligence" name="intelligence">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="rare"> Rare</label>
-            <input type="checkbox" id="rare" name="rare">
-
-        </div>
-        <div>
-            <label for="hypoallergenic"> Hypoallergenic</label>
-            <input type="checkbox" id="hypoallergenic" name="hypoallergenic">
-
-        </div>
-        <div class="allcats">
-            <label for="allcats"> Show all Cat Breeds</label>
-            <input type="checkbox" id="allcats" name="allcats">
-
-        </div>
+            </div>
+        </section>
+        <section>
+            <h4>Fitting into your lifestyle</h4>
+            <div>
+                <label for="coatLength">Coat Length</label>
+                <select id="coatLength" name="coatLength">
+                    <option value="0">0</option>
+                    <option value="1">1 - not very</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 - very</option>
+                </select>
+            </div>
+            <div>
+                <label for="active">Energetic</label>
+                <select id="active" name="active">
+                    <option value="0">0</option>
+                    <option value="1">1 - not very</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 - very</option>
+                </select>
+            </div>
 
 
-        <div class="formButton">
+
+            <div>
+                <label for="friendly">Friendliness</label>
+                <select id="friendly" name="friendly">
+                    <option value="0">0</option>
+                    <option value="1">1 - not very</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 - very</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="intelligence">Intelligence</label>
+                <select id="intelligence" name="intelligence">
+                    <option value="0">0</option>
+                    <option value="1">1 - not very</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4 - very</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <h4>Other options</h4>
+            <div>
+                <label for="rare"> Rare</label>
+                <input type="checkbox" id="rare" name="rare">
+            </div>
+        </section>
+        <div class="submitButton">
             <button type="submit">Search</button>
         </div>
 
