@@ -8,7 +8,9 @@ This is an app that lets you choose your perfect cat breed and uses api calls to
 
 This project is using vanilla HTML, CSS and JavaScript. We are using axios for the api calls.
 
-We are using dialog-polyfill to make sure the modal displays properly across browsers. If you don't have it already, please install [npm](https://www.npmjs.com/get-npm). Open the project folder in your terminal and enter "npm install" to download the dialog-polyfill.
+## Design files:
+
+[FIGMA](https://www.figma.com/file/rQnDC9KhcN3zOqyBB1d2RW/catmatch-landing-option)
 
 ## Tickets:
 
@@ -20,4 +22,4 @@ On project's space is on [Wondr](https://mywondr.co/profile/view/cdd60d10-7ac3-1
 
 ## Chapter Lead:
 
-Our chapter lead for this project is @cendei.
+Our chapter lead for this project is @cendei (Denice)

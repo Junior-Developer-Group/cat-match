@@ -32,42 +32,49 @@ footer button {
 }
 
 #modal {
+  display: none;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   border: 0.05em solid var(--opaque-black);
   border-radius: 0.4em;
   color: var(--dark-grey);
 
-  max-width: 80%;
+  width: fit-content;
 }
 
-dialog a {
+#modal a {
   color: var(--dark-sea-green);
 }
 
-dialog a:visited {
+#modal a:visited {
   color: var(--purple);
 }
 
-dialog h1 {
+#modal h1 {
   font-size: 1.2em;
   text-align: center;
   color: var(--dark-sea-green);
 }
 
-dialog p,
-dialog button {
+#modal p,
+#modal button {
   font-size: 0.9em;
 }
 
-dialog p {
+#modal p {
   padding: 0 0.5em;
 }
 
 footer button,
-dialog button {
+#modal button {
   cursor: pointer;
 }
 
-dialog button {
+#modal button {
   background: var(--purple);
   color: var(--white);
 
@@ -83,7 +90,7 @@ dialog button {
   transition-duration: 0.4s;
 }
 
-dialog button:hover {
+#modal button:hover {
   background: var(--purple);
 }
 

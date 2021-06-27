@@ -19,19 +19,11 @@
       type="image/svg+xml"
     />
     <link rel="stylesheet" href="assets/styles/styles.css" />
-    <!-- Browser compatibility for <dialog> -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="node_modules/dialog-polyfill/dist/dialog-polyfill.css"
-    />
   </head>
 
   <body>
-    <footer>
-      <button class="toggle-modal">Thank you</button>
-    </footer>
-    <dialog id="modal">
+    <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
+    <div id="modal">
       <h1>Thank you!</h1>
       <div class="modal-content">
         <p>
@@ -42,9 +34,12 @@
           <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
           Copyright 2021 Katerina Limpitsouni
         </p>
-        <button class="toggle-modal">Close</button>
+        <button class="toggle-modal" aria-label="close">Close</button>
       </div>
-    </dialog>
+    </div>
+    <footer>
+      <button class="toggle-modal">Thank you</button>
+    </footer>
   </body>
   <script src="assets/scripts/index.js"></script>
   <script src="assets/scripts/modal.js"></script>
