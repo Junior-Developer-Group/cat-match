@@ -1,46 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:title"
-      content="Cat Match -find your perfect cat breed"
-    />
-    <meta
-      property="og:description"
-      content="Enter your requirements and get a list of matching cat breeds"
-    />
-    <title>Cat-Match</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/images/cat-solid.svg"
-      type="image/svg+xml"
-    />
-    <link rel="stylesheet" href="assets/styles/styles.css" />
-  </head>
 
-  <body>
-    <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
-    <div id="modal">
-      <h1>Thank you to:</h1>
-      <div class="modal-content">
-        <p>
-          <a href="https://fontawesome.com/license/free">Fontawesome</a> - Cat
-          icon, CC by 4.0
-        </p>
-        <p>
-          <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
-          Copyright 2021 Katerina Limpitsouni
-        </p>
-        <button class="toggle-modal" aria-label="close">Close</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Cat Match -find your perfect cat breed" />
+  <meta property="og:description" content="Enter your requirements and get a list of matching cat breeds" />
+  <title>Cat-Match</title>
+  <link rel="shortcut icon" href="./assets/images/cat-solid.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Cat Match -find your perfect cat breed" />
+  <meta name="description" content="Enter your requirements and get a list of matching cat breeds">
+  <title> Cat-Match</title>
+  <link rel="shortcut icon" href="./assets/images/cat-solid.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+
+<body>
+  <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
+  <div id="modal">
+    <h1>Thank you to:</h1>
+    <div class="modal-content">
+      <p>
+        <a href="https://fontawesome.com/license/free">Fontawesome</a> - Cat
+        icon, CC by 4.0
+      </p>
+      <p>
+        <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
+        Copyright 2021 Katerina Limpitsouni
+      </p>
+      <button class="toggle-modal" aria-label="close">Close</button>
     </div>
-    <footer>
-      <button class="toggle-modal">Thank you</button>
-    </footer>
-  </body>
-  <script src="assets/scripts/index.js"></script>
-  <script src="assets/scripts/modal.js"></script>
+  </div>
+
+  <form id="form" method="POST" action="">
+    <h2>Find your perfect feline friend.</h2>
+    <section>
+      <p class="allCatsSection"> I dont want to search, show me all the cat breeds.</p>
+      <div class="showAllCatsButton">
+        <button class="allCatsButton">Show All Cats</button>
+      </div>
+    </section>
+    <p class="formInstructions">Choose your options based on your needs where: 1 = not very and 5 = very </p>
+    <section>
+      <h4>Fitting into your family</h4>
+      <div>
+        <label for="dogFriendly">Dog-friendly</label>
+        <select id="dogFriendly" name="dogFriendly">
+          <option value="0"></option>
+          <option value="1">1- not very</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4 - very</option>
+        </select>
+      </div>
+      <div>
+        <label for="hypoallergenic"> Hypoallergenic</label>
+        <input type="checkbox" id="hypoallergenic" name="hypoallergenic">
+
+      </div>
+    </section>
+    <section>
+      <h4>Fitting into your lifestyle</h4>
+      <div>
+        <label for="coatLength">Coat Length</label>
+        <select id="coatLength" name="coatLength">
+          <option value="0"></option>
+          <option value="1">1 - not very</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4 - very</option>
+        </select>
+      </div>
+      <div>
+        <label for="active">Energetic</label>
+        <select id="active" name="active">
+          <option value="0"></option>
+          <option value="1">1 - not very</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4 - very</option>
+        </select>
+      </div>
+
+
+
+      <div>
+        <label for="friendly">Friendliness</label>
+        <select id="friendly" name="friendly">
+          <option value="0"></option>
+          <option value="1">1 - not very</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4 - very</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="intelligence">Intelligence</label>
+        <select id="intelligence" name="intelligence">
+          <option value="0"></option>
+          <option value="1">1 - not very</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4 - very</option>
+        </select>
+      </div>
+    </section>
+    <section>
+      <h4>Other options</h4>
+      <div>
+        <label for="rare"> Rare</label>
+        <input type="checkbox" id="rare" name="rare">
+      </div>
+    </section>
+    <div class="submitButton">
+      <button type="submit">Search</button>
+    </div>
+
+  </form>
+  <footer>
+    <button class="toggle-modal">Thank you</button>
+  </footer>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="assets/scripts/index.js"></script>
+<script src="assets/scripts/modal.js"></script>
+
 </html>
