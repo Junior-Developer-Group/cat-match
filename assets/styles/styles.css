@@ -1,22 +1,26 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
 
 :root {
   --white: #f5f5f5;
-  --opaque-black: rgba(0,0,0,0.25);
+  --opaque-black: rgba(0, 0, 0, 0.25);
   --black: #171717;
-  --light-grey:#e9e9e9;
-  --purple:#6C63FF;
-  --light-purple:#8b84fa;
-  --very-light-grey:#ccc;
+  --dark-grey: rgba(0, 0, 0, 0.75);
+  --light-grey: #e9e9e9;
+  --purple: #6c63ff;
+  --light-purple: #8b84fa;
+  --light-sea-green: #3ad29f;
+  --dark-sea-green: #155e46;
+  --very-light-grey: #ccc;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body{
-font-family: 'Poppins', sans-serif;
+body {
+  background: var(--white);
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
 }
 
 #form{
@@ -201,3 +205,83 @@ font-size:1.3em;
 }
 }
 
+
+
+footer button {
+  background: var(--white);
+  color: var(--black);
+
+  text-decoration: underline;
+  border: none;
+}
+
+#modal {
+  display: none;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 0.05em solid var(--opaque-black);
+  border-radius: 0.4em;
+  color: var(--dark-grey);
+
+  width: fit-content;
+}
+
+#modal a {
+  color: var(--dark-sea-green);
+}
+
+#modal a:visited {
+  color: var(--purple);
+}
+
+#modal h1 {
+  font-size: 1.2em;
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+#modal p,
+#modal button {
+  font-size: 0.9em;
+}
+
+#modal p {
+  padding: 0 0.5em;
+}
+
+footer button,
+#modal button {
+  cursor: pointer;
+}
+
+#modal button {
+  background: var(--purple);
+  color: var(--white);
+
+  letter-spacing: 0.04em;
+  text-decoration: none;
+
+  margin-top: 0.75em;
+  padding: 1em 1.5em;
+
+  border: none;
+  border-radius: 0.5em;
+
+  transition-duration: 0.4s;
+}
+
+#modal button:hover {
+  background: var(--purple);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  margin: 0.5em 2em 1em;
+}
