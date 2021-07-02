@@ -1,2 +1,10 @@
-h2 {text-align: center; color: #6C63FF;}
-p {text-indent: 2em;}
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {color: #6C63FF;
+    text-align: center;}
+p {text-indent: 2em;
+    width: 65ch;}
+    <!-- ch is based on character width -->
