@@ -6,5 +6,5 @@
 h2 {color: #6C63FF;
     text-align: center;}
 p {text-indent: 2em;
-    width: 65ch;}
-    <!-- ch is based on character width -->
+    max-width: 65ch;}
+    /* ch is based on character width */
