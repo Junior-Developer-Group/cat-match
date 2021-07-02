@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Cat Match -find your perfect cat breed"
+    />
+    <meta
+      property="og:description"
+      content="Enter your requirements and get a list of matching cat breeds"
+    />
+    <title>Cat-Match</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/cat-solid.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Cat Match -find your perfect cat breed" />
-    <meta property="og:description" content="Enter your requirements and get a list of matching cat breeds" />
-    <title> Cat-Match</title>
-    <link rel="shortcut icon" href="./assets/images/cat-solid.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/styles/styles.css">
-</head>
-
-<body>
-
-</body>
-<script src="assets/scripts/index.js"></script>
-
+  <body>
+    <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
+    <div id="modal">
+      <h1>Thank you to:</h1>
+      <div class="modal-content">
+        <p>
+          <a href="https://fontawesome.com/license/free">Fontawesome</a> - Cat
+          icon, CC by 4.0
+        </p>
+        <p>
+          <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
+          Copyright 2021 Katerina Limpitsouni
+        </p>
+        <button class="toggle-modal" aria-label="close">Close</button>
+      </div>
+    </div>
+    <footer>
+      <button class="toggle-modal">Thank you</button>
+    </footer>
+  </body>
+  <script src="assets/scripts/index.js"></script>
+  <script src="assets/scripts/modal.js"></script>
 </html>
