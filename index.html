@@ -13,14 +13,13 @@
 </head>
 
 <body>
-  <div class="intro-wrapper">
-    <section class="intro">
-      <h2>Welcome to Cat Match!</h2>
-      <p>Our Cat Match app will help you find the perfect cat breed for your home and lifestyle. Use the search form below, and Cat Match will suggest compatible breeds for you based on the Cat API.</p>
-      <p>Most of the options below are ranked on a scale of 1-4, with 4 being the most. For example, if you have a small living space, you might want to set "Activity" to 1 or 2, so the app will show you less-active breeds.</p>
-    </section>
+  <div id="top"></div>
+  <section class="intro">
+    <h2>Welcome to Cat Match!</h2>
+    <p>Our Cat Match app will help you find the perfect cat breed for your home and lifestyle. Use the search form below, and Cat Match will suggest compatible breeds for you based on the Cat API.</p>
+    <p>Most of the options below are ranked on a scale of 1-4, with 4 being the most. For example, if you have a small living space, you might want to set "Activity" to 1 or 2, so the app will show you less-active breeds.</p>
+  </section>
   <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
-  </div>
   <div id="modal">
     <h1>Thank you to:</h1>
     <div class="modal-content">
@@ -125,6 +124,10 @@
   <footer>
     <button class="toggle-modal">Thank you</button>
   </footer>
+  <div class="scroll-top-wrapper">
+    <a href="#top" class="scroll-top">Back to Top
+    </a>
+  </div>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="assets/scripts/index.js"></script>

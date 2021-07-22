@@ -305,3 +305,22 @@ footer button,
 
   margin: 0.5em 2em 1em;
 }
+
+.scroll-top-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-top {
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  margin-top: 0.75em;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.scroll-top:hover {
+  background-color: var(--light-purple);
+}
