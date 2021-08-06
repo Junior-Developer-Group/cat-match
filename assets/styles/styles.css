@@ -23,6 +23,17 @@ body {
   color: var(--black);
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;}
+.intro h2 {color: var(--black);
+    text-align: center;}
+.intro p {/*text-indent: 2em;*/
+    max-width: 65ch;}
+    /* ch is based on character width */
+
 #form{
 display: flex;
 flex-direction:column;
@@ -156,6 +167,10 @@ background-color: var(--light-grey);
 
 @media only screen and (min-width: 48em) {
 
+.intro p {
+font-size: 1.2em;
+}
+
 #form{
 
 width:80%;
@@ -172,6 +187,11 @@ font-size:1em;
 }
 
 @media only screen and (min-width: 64.5em) {
+
+.intro {
+font-size: 1.4em;
+}
+
 #form{
 width:55%;
 padding:3em;
@@ -284,4 +304,23 @@ footer button,
   align-items: stretch;
 
   margin: 0.5em 2em 1em;
+}
+
+.scroll-top-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-top {
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  margin-top: 0.75em;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.scroll-top:hover {
+  background-color: var(--light-purple);
 }
