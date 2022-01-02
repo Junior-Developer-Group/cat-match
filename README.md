@@ -7,6 +7,7 @@ This is an app that lets you choose your perfect cat breed and uses api calls to
 ## Technology and languages used:
 
 This project is using vanilla HTML, CSS and JavaScript. We are using axios for the api calls.
+There are no external libraries used at this time.
 
 ## Design files:
 
@@ -14,12 +15,13 @@ This project is using vanilla HTML, CSS and JavaScript. We are using axios for t
 
 ## Tickets:
 
-You can find all available tickets on our Jira board (to access Jira you must be a member on Discord and WONDR).
+You can find all available tickets on our Jira board.
+To access our Jira board you'll need to be a member of our Discord channel and share your email address with @cendei or @likii who will then be able to manually add you there. 
 
 ## Communication:
 
-On project's space is on [Wondr](https://mywondr.co/profile/view/cdd60d10-7ac3-11eb-b163-1fd52740df0d/?invite=1), where you can find all information on how to contribute to this project and we also chat on our Discord group - [Discord](https://discord.com/invite/HgFaYYADRC).
+[Discord](https://discord.com/invite/HgFaYYADRC).
 
-## Chapter Lead:
+## Team Lead:
 
-Our chapter lead for this project is @cendei (Denice)
+Our team lead for this project is @cendei (Denice)
