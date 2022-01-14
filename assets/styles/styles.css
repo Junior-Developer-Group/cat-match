@@ -23,6 +23,41 @@ body {
   color: var(--black);
 }
 
+.hero-section{
+}
+
+.hero-heading{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-svg{
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 150px;
+    height: 35px;
+    background: #6C63FF;
+    border-radius: 15px;
+}
+
 .intro {
     display: flex;
     flex-direction: column;
