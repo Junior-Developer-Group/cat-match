@@ -2,6 +2,8 @@ const catApi="https://api.thecatapi.com/v1/breeds";
 const allcats=document.getElementById("allcats");
 const submitButton=document.querySelector(".submitButton");
 const form=document.getElementById("form");
+const allCatsButton=document.querySelector(".allCatsButton");
+let catBreeds; 
 
 
 
@@ -11,6 +13,10 @@ submitButton.addEventListener("click", (e) => {
     console.log(userValues);
 })
 
+allCatsButton.addEventListener("click", async (e) => {
+    catBreeds = await getAllCatBreeds();
+    console.log(allCatBreeds);
+});
 
 function getUserInputs() {
     const inputs=form.elements;
