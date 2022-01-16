@@ -14,8 +14,11 @@ submitButton.addEventListener("click", (e) => {
 })
 
 allCatsButton.addEventListener("click", async (e) => {
-    catBreeds = await getAllCatBreeds();
-    console.log(allCatBreeds);
+    let result = await getAllCatBreeds();
+    if(result){
+        console.log(result.data);
+        catBreeds = result.data;
+    }
 });
 
 function getUserInputs() {
