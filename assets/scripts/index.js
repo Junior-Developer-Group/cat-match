@@ -7,17 +7,16 @@ let catBreeds;
 
 
 
-submitButton.addEventListener("click", (e) => {
+submitButton.addEventListener("click", async (e) => {
     e.preventDefault();
     getUserInputs();
     console.log(userValues);
-})
 
-allCatsButton.addEventListener("click", async (e) => {
     let result = await getAllCatBreeds();
     if(result){
         console.log(result.data);
         catBreeds = result.data;
+        //Code for displaying the cats based on the input search parameters goes here.
     }
 });
 
