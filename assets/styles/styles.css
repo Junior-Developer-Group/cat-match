@@ -323,3 +323,36 @@ footer button,
 .scroll-top:hover {
   background-color: var(--light-purple);
 }
+
+footer {
+  margin: 1em;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link,
+.copyright {
+  text-align: center;
+}
+
+.footer-link {
+  font-size: 20px;
+}
+
+.heart-icon {
+  font-size: 30px;
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+.heart-icon {
+  color: var(--purple);
+}
+
+.site-link {
+  text-decoration: none;
+  color: var(--black);
+}
