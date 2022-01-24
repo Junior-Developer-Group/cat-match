@@ -337,7 +337,7 @@ footer {
 }
 
 .footer-link {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .heart-icon {
@@ -345,7 +345,8 @@ footer {
 }
 
 .copyright {
-  font-size: 15px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 .heart-icon {
@@ -353,6 +354,33 @@ footer {
 }
 
 .site-link {
+  display: inline-block;
+  margin: 0;
   text-decoration: none;
-  color: var(--black);
+  color: var(--purple);
+  padding: 2.5px;
+}
+
+.site-link:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px var(--light-purple);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.site-link:hover:after {
+  transform: scaleX(1);
+}
+
+.site-link:active {
+  color: var(--light-sea-green);
+}
+
+.site-link:visited {
+  color: var(--dark-sea-green);
+}
+
+.site-link:visited::after {
+  border-bottom-color: var(--dark-sea-green);
 }
