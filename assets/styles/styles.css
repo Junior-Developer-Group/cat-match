@@ -56,6 +56,15 @@ padding:0.5em;
 margin:0.5em;
 }
 
+#form fieldset{
+border: none;
+box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
+border-radius: 0.7em;
+width:100%;
+padding:0.5em;
+margin:0.5em;
+}
+
 #form p{
 width:100%;
 text-align:center;
