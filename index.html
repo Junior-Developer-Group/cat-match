@@ -12,17 +12,8 @@
   <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 
-<body id="main-bg">
+<body>
   <div id="top"></div>
-  <!--Hero Section-->
-  <section class="hero-section">
-    <h1 class="hero-heading">Cat Match</h1>
-    <p class="hero-sub-heading">Find your perfect cat breed</p>
-    <div class="hero-svg-section">
-      <img src="./assets/images/man_cat_couch.svg" class="hero-svg">
-      <button class="hero-button">Get started</button>
-    </div>
-  </section>
   <section class="intro">
     <h2>Welcome to Cat Match!</h2>
     <p>Our Cat Match app will help you find the perfect cat breed for your home and lifestyle. Use the search form below, and Cat Match will suggest compatible breeds for you based on the Cat API.</p>
@@ -46,14 +37,14 @@
 
   <form id="form" method="POST" action="">
     <h2>Find your perfect feline friend.</h2>
-    <fieldset>
+    <section>
       <p class="allCatsSection"> I dont want to search, show me all the cat breeds.</p>
       <div class="showAllCatsButton">
         <button class="allCatsButton">Show All Cats</button>
       </div>
-    </fieldset>
+    </section>
     <p class="formInstructions">Choose your options based on your needs where: 1 = not very and 5 = very </p>
-    <fieldset>
+    <section>
       <h4>Fitting into your family</h4>
       <div>
         <label for="dogFriendly">Dog-friendly</label>
@@ -70,8 +61,8 @@
         <input type="checkbox" id="hypoallergenic" name="hypoallergenic">
 
       </div>
-    </fieldset>
-    <fieldset>
+    </section>
+    <section>
       <h4>Fitting into your lifestyle</h4>
       <div>
         <label for="coatLength">Coat Length</label>
@@ -117,14 +108,14 @@
           <option value="4">4 - very</option>
         </select>
       </div>
-    </fieldset>
-    <fieldset>
+    </section>
+    <section>
       <h4>Other options</h4>
       <div>
         <label for="rare"> Rare</label>
         <input type="checkbox" id="rare" name="rare">
       </div>
-    </fieldset>
+    </section>
     <div class="submitButton">
       <button type="submit">Search</button>
     </div>

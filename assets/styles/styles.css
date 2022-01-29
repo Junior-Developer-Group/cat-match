@@ -23,47 +23,6 @@ body {
   color: var(--black);
 }
 
-.hero-section{
-}
-
-.hero-heading{
-    font-size: 65px;
-    line-height: 65px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hero-sub-heading{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.hero-svg{
-    width: 50%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    background: #6C63FF;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .intro {
     display: flex;
     flex-direction: column;
@@ -89,15 +48,6 @@ border-radius: 0.7em;
 }
 
 #form section{
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-border-radius: 0.7em;
-width:100%;
-padding:0.5em;
-margin:0.5em;
-}
-
-#form fieldset{
-border: none;
 box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
 border-radius: 0.7em;
 width:100%;
@@ -234,44 +184,8 @@ font-weight:bold;
 font-size:1em;
 }
 
-.hero-heading{
-    font-size: 70px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0px;
 }
 
-.hero-sub-heading{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.hero-svg{
-    width: 30%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    background: #6C63FF;
-    border-radius: 30px;
-}
-}
-
-
-/* Desktop View */
 @media only screen and (min-width: 64.5em) {
 
 .intro {
@@ -309,29 +223,9 @@ font-size:1.3em;
 #form button{
 font-size:1.3em;
 }
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
 }
 
-.hero-svg{
-    width: 30%;
-}
 
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 300px;
-    height: 50px;
-    background: #6C63FF;
-    border-radius: 30px;
-}
-}
 
 footer button {
   background: var(--white);
@@ -341,17 +235,8 @@ footer button {
   border: none;
 }
 
-.bg-modal{
-   background: rgba(0,0,0,0.9);
-   top: 0;
-   height: 100%;
-   width: 100%;
-   position: fixed;
-}
-
 #modal {
   display: none;
-  background: rgb(255,255,255);
 
   position: absolute;
   top: 50%;
