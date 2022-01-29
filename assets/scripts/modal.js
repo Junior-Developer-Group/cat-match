@@ -1,5 +1,6 @@
 var modal = document.querySelector('#modal');
 var modalButtons = document.querySelectorAll('.toggle-modal');
+var body = document.getElementById("top");
 var lastFocussedElement;
 
 function toggleModal() {
@@ -12,6 +13,7 @@ function toggleModal() {
 
 function openModal() {
   modal.style.display = 'block';
+  body.classList += "bg-modal";
 
   // Remember the last selected item on the page
   lastFocussedElement = document.activeElement;
@@ -23,6 +25,7 @@ function openModal() {
 
 function closeModal() {
   modal.style.display = 'none';
+  body.classList = "";
 
   // Return the user to the last item they were looking at before opening the modal
   lastFocussedElement.focus();
