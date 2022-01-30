@@ -1,87 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      property="og:title"
-      content="Cat Match -find your perfect cat breed"
-    />
-    <meta
-      property="og:description"
-      content="Enter your requirements and get a list of matching cat breeds"
-    />
-    <title>Cat-Match</title>
-    <link
-      rel="shortcut icon"
-      href="./assets/images/cat-solid.svg"
-      type="image/svg+xml"
-    />
-    <link rel="stylesheet" href="assets/styles/styles.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Cat Match -find your perfect cat breed" />
+  <meta property="og:description" content="Enter your requirements and get a list of matching cat breeds" />
+  <title>Cat-Match</title>
+  <link rel="shortcut icon" href="./assets/images/cat-solid.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+
+<body>
     <div id="top"></div>
-
     <section class="intro">
       <h2>Welcome to Cat Match!</h2>
-
-      <p>
-        Our Cat Match app will help you find the perfect cat breed for your home
-        and lifestyle. Use the search form below, and Cat Match will suggest
-        compatible breeds for you based on the Cat API.
-      </p>
-
-      <p>
-        Most of the options below are ranked on a scale of 1-4, with 4 being the
-        most. For example, if you have a small living space, you might want to
-        set "Activity" to 1 or 2, so the app will show you less-active breeds.
-      </p>
+      <p>Our Cat Match app will help you find the perfect cat breed for your home and lifestyle. Use the search form below, and Cat Match will suggest compatible breeds for you based on the Cat API.</p>
+      <p>Most of the options below are ranked on a scale of 1-4, with 4 being the most. For example, if you have a small living space, you might want to set "Activity" to 1 or 2, so the app will show you less-active breeds.</p>
     </section>
-
     <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
     <div id="modal">
       <h1>Thank you to:</h1>
-
       <div class="modal-content">
         <p>
-          <a href="https://fontawesome.com/license/free">Font awesome</a> - Cat
+          <a href="https://fontawesome.com/license/free">Fontawesome</a> - Cat
           icon, CC by 4.0
         </p>
-
         <p>
           <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
           Copyright 2021 Katerina Limpitsouni
         </p>
-
         <button class="toggle-modal" aria-label="close">Close</button>
       </div>
     </div>
 
     <form id="form" method="POST" action="">
       <h2>Find your perfect feline friend.</h2>
-
       <section>
-        <p class="allCatsSection">
-          I don't want to search, show me all the cat breeds.
-        </p>
-
+        <p class="allCatsSection"> I dont want to search, show me all the cat breeds.</p>
         <div class="showAllCatsButton">
-          <button class="allCatsButton">Show All Cats</button>
+          <button class="allCatsButton" type="button">Show All Cats</button>
         </div>
       </section>
-
-      <p class="formInstructions">
-        Choose your options based on your needs where: 1 = not very and 5 = very
-      </p>
-
+      <p class="formInstructions">Choose your options based on your needs where: 1 = not very and 5 = very </p>
       <section>
         <h4>Fitting into your family</h4>
-
         <div>
           <label for="dogFriendly">Dog-friendly</label>
-
           <select id="dogFriendly" name="dogFriendly">
             <option value="0"></option>
             <option value="1">1- not very</option>
@@ -90,16 +56,14 @@
             <option value="4">4 - very</option>
           </select>
         </div>
-
         <div>
           <label for="hypoallergenic"> Hypoallergenic</label>
-          <input type="checkbox" id="hypoallergenic" name="hypoallergenic" />
+          <input type="checkbox" id="hypoallergenic" name="hypoallergenic">
+
         </div>
       </section>
-
       <section>
         <h4>Fitting into your lifestyle</h4>
-
         <div>
           <label for="coatLength">Coat Length</label>
           <select id="coatLength" name="coatLength">
@@ -110,7 +74,6 @@
             <option value="4">4 - very</option>
           </select>
         </div>
-
         <div>
           <label for="active">Energetic</label>
           <select id="active" name="active">
@@ -144,27 +107,22 @@
           </select>
         </div>
       </section>
-
       <section>
         <h4>Other options</h4>
-
         <div>
           <label for="rare"> Rare</label>
-          <input type="checkbox" id="rare" name="rare" />
+          <input type="checkbox" id="rare" name="rare">
         </div>
       </section>
-
       <div class="submitButton">
         <button type="submit">Search</button>
       </div>
+      <img class="loader" src="assets/images/cat-loader.gif">
+
     </form>
-
-    <div class="scroll-top-wrapper">
-      <a href="#top" class="scroll-top">Back to Top </a>
-    </div>
-
+    
     <footer>
-      <!-- <button class="toggle-modal">Thank you</button> -->
+      <button class="toggle-modal">Thank you</button>
 
       <span class="footer-link">
         Made with <span class="heart-icon"> &hearts; </span> by
@@ -178,9 +136,14 @@
 
       <small class="copyright">© Junior Developer Group, 2022</small>
     </footer>
-  </body>
+    <div class="scroll-top-wrapper">
+      <a href="#top" class="scroll-top">Back to Top
+      </a>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="assets/scripts/cat-api.js"></script>
+<script src="assets/scripts/index.js"></script>
+<script src="assets/scripts/modal.js"></script>
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="assets/scripts/index.js"></script>
-  <script src="assets/scripts/modal.js"></script>
 </html>
