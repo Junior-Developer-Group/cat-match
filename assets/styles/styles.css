@@ -24,6 +24,47 @@ body {
   color: var(--black);
 }
 
+.hero-section{
+}
+
+.hero-heading{
+    font-size: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.hero-svg{
+    width: 50%;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    background: #6C63FF;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -185,6 +226,41 @@ font-weight:bold;
 font-size:1em;
 }
 
+.hero-heading{
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.hero-svg{
+    width: 30%;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    background: #6C63FF;
+    border-radius: 30px;
+}
+
 }
 
 @media only screen and (min-width: 64.5em) {
@@ -224,6 +300,44 @@ font-size:1.3em;
 #form button{
 font-size:1.3em;
 }
+
+.hero-heading{
+    font-size: 150px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0px 2px 4px #000;
+    margin-bottom: 0px;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: normal;
+    font-size: 50px;
+    margin-top: 50px;
+}
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.hero-svg{
+    width: 45%;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 300px;
+    height: 90px;
+    font-size: 36px;
+    background: #6C63FF;
+    border-radius: 30px;
+}
+
 }
 
 
