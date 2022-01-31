@@ -11,6 +11,11 @@
   --light-sea-green: #3ad29f;
   --dark-sea-green: #155e46;
   --very-light-grey: #ccc;
+
+  --modal-light-grey:rgba(250, 249, 249, 0.55);
+  --modal-shadow:rgba(0, 0, 0, 0.1);
+  --modal-border: rgba(255, 255, 255, 0.28);
+  
 }
 
 * {
@@ -244,9 +249,14 @@ footer button {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  border: 0.05em solid var(--opaque-black);
   border-radius: 0.4em;
+  /* Glassmorphism effect */
   color: var(--dark-grey);
+  background: var(--modal-light-grey);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px var(--modal-shadow);
+  backdrop-filter: blur(11px);
+  border: 1px solid var(--modal-border);
 
   width: fit-content;
 }
