@@ -14,7 +14,7 @@
 
   --modal-light-grey:rgba(250, 249, 249, 0.55);
   --modal-shadow:rgba(0, 0, 0, 0.1);
-  --modal-border: rgba(255, 255, 255, 0.28);
+  --modal-border: #6c63ff;
   
 }
 
@@ -244,7 +244,7 @@ footer button {
 #modal {
   display: none;
 
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -256,9 +256,11 @@ footer button {
   border-radius: 16px;
   box-shadow: 0 4px 30px var(--modal-shadow);
   backdrop-filter: blur(11px);
-  border: 1px solid var(--modal-border);
+  border: 25px solid var(--modal-border);
 
-  width: fit-content;
+  width: 80%;
+  height: 80%;
+  z-index: 5;
 }
 
 #modal a {
@@ -290,7 +292,7 @@ footer button,
 }
 
 #modal button {
-  background: var(--purple);
+  background: var(--light-sea-green);
   color: var(--white);
 
   letter-spacing: 0.04em;
@@ -312,9 +314,10 @@ footer button,
 .modal-content {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
 
   margin: 0.5em 2em 1em;
+  height: 80%;
 }
 
 .scroll-top-wrapper {
