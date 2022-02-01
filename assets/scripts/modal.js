@@ -36,3 +36,11 @@ document.addEventListener('keydown', (event) => {
     closeModal();
   }
 });
+
+//Allow the user to close the modal by clicking outside modal window
+document.addEventListener('mouseup', (event) => {
+  if(!modal.contains(event.target)){
+    closeModal();
+  }
+});
+
