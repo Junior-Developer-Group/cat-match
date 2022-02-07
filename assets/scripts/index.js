@@ -3,20 +3,15 @@ const allcats = document.getElementById("allcats");
 const submitButton = document.querySelector(".submitButton");
 const form = document.getElementById("form");
 const allCatsButton = document.querySelector(".allCatsButton");
-<<<<<<< HEAD
 
 const loader = document.querySelector(".loader");
 let catResults;
-=======
-const loader = document.querySelector(".loader");
->>>>>>> ee1ce78 (add logic for reseting search form)
 let catBreeds;
 
 submitButton.addEventListener("click", async (e) => {
   displayLoader();
   e.preventDefault();
   getUserInputs();
-<<<<<<< HEAD
 
   let result = await getAllCatBreeds();
   if (result) {
@@ -44,17 +39,6 @@ submitButton.addEventListener("click", async (e) => {
   }
   console.log(catBreeds);
   console.log(catResults);
-=======
-  console.log(userValues);
-
-  let result = await getAllCatBreeds();
-  if (result) {
-    console.log(result.data);
-    catBreeds = result.data;
-    //the hideLoader function should go here, when the code for displaying the cats data is done
-    //Code for displaying the cats based on the input search parameters goes here.
-  }
->>>>>>> ee1ce78 (add logic for reseting search form)
 });
 function displayLoader() {
   loader.classList.add("display");
@@ -75,13 +59,6 @@ function getUserInputs() {
     if (input.type == "checkbox") {
       formValues[input.id] = input.checked == true ? 1 : 0;
     } else if (input.type == "select-one") {
-<<<<<<< HEAD
-      formValues[input.id] = parseInt(input.value);
-    }
-  }
-  return (userValues = { ...formValues });
-}
-=======
       formValues[input.id] = input.value;
     }
   }
@@ -102,4 +79,3 @@ function resetSearchForm() {
     }
   }
 }
->>>>>>> ee1ce78 (add logic for reseting search form)
