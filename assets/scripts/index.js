@@ -59,7 +59,7 @@ function getUserInputs() {
     if (input.type == "checkbox") {
       formValues[input.id] = input.checked == true ? 1 : 0;
     } else if (input.type == "select-one") {
-      formValues[input.id] = input.value;
+      formValues[input.id] = parseInt(input.value);
     }
   }
   //this may be changes to a button click?
