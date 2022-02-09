@@ -62,5 +62,20 @@ function getUserInputs() {
       formValues[input.id] = parseInt(input.value);
     }
   }
+  //this may be changes to a button click?
+  resetSearchForm();
   return (userValues = { ...formValues });
+}
+
+function resetSearchForm() {
+  const inputs = form.elements;
+  for (const input of inputs) {
+    if (input.type == "checkbox" || input.type == "select-one") {
+      if (input.type == "checkbox") {
+        input.checked = false;
+      } else if (input.type == "select-one") {
+        input.value = "";
+      }
+    }
+  }
 }
