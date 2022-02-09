@@ -58,7 +58,7 @@ border-radius: 0.7em;
  
 }
 
-#form section{
+#form fieldset{
 box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
 border-radius: 0.7em;
 width:100%;
