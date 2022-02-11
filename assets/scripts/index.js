@@ -12,9 +12,11 @@ submitButton.addEventListener("click", async (e) => {
   displayLoader();
   e.preventDefault();
   getUserInputs();
+  console.log(userValues);
 
   let result = await getAllCatBreeds();
   if (result) {
+    console.log(result.data);
     catBreeds = result.data;
     //the hideLoader function should go here, when the code for displaying the cats data is done
     //Code for displaying the cats based on the input search parameters goes here.
@@ -42,8 +44,10 @@ submitButton.addEventListener("click", async (e) => {
 });
 function displayLoader() {
   loader.classList.add("display");
+  loader.setAttribute("aria-expanded", "true");
   setTimeout(() => {
     loader.classList.remove("display");
+    loader.setAttribute("aria-expanded", "false");
   }, 5000);
 }
 
@@ -62,5 +66,20 @@ function getUserInputs() {
       formValues[input.id] = parseInt(input.value);
     }
   }
+  //this may be changes to a button click?
+  resetSearchForm();
   return (userValues = { ...formValues });
+}
+
+function resetSearchForm() {
+  const inputs = form.elements;
+  for (const input of inputs) {
+    if (input.type == "checkbox" || input.type == "select-one") {
+      if (input.type == "checkbox") {
+        input.checked = false;
+      } else if (input.type == "select-one") {
+        input.value = "";
+      }
+    }
+  }
 }
