@@ -212,6 +212,48 @@ select:hover {
   background-color: var(--light-grey);
 }
 
+  .hero-heading{
+    font-size: 5em;
+    line-height: 1em;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0em 0.003em 0.03em #000;
+    margin-bottom: 0.05em;
+    margin-top: 0.3125em;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+}
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.hero-svg{
+    width: 25em;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 8.75em;
+    height: 2.5em;
+    font-size: 1.5em;
+    background: #6C63FF;
+    border-radius: 0.7em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 @media only screen and (min-width: 48em) {
   .intro p {
     font-size: 1.2em;
@@ -228,6 +270,44 @@ select:hover {
     font-weight: bold;
     font-size: 1em;
   }
+  .hero-heading{
+    font-size: 7em;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0em 0.003em 0.03em #000;
+    margin-bottom: 0.09em;
+    margin-top: 0.3125em;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.hero-svg{
+    width: 30em;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 8.75em;
+    height: 2.5em;
+    font-size: 1.5em;
+    background: #6C63FF;
+    border-radius: 0.7em;
+}
 }
 
 @media only screen and (min-width: 64.5em) {
@@ -265,6 +345,45 @@ select:hover {
   #form button {
     font-size: 1.3em;
   }
+
+  .hero-heading{
+    font-size: 9em;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0em 0.003em 0.03em #000;
+    margin-bottom: 0.09em;
+    margin-top: 0.3125em;
+}
+
+.hero-sub-heading{
+    text-align: center;
+    font-weight: normal;
+    font-size: 3em;
+    margin-top: 1em;
+    margin-bottom: 0em;
+}
+.hero-svg-section{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.hero-svg{
+    width: 40em;
+}
+
+.hero-button{
+    border: none;
+    color: #fff;
+    width: 10.75em;
+    height: 2.625em;
+    font-size: 2.25em;
+    background: #6C63FF;
+    border-radius: 0.875em;
+}
 }
 
 footer button {
