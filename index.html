@@ -54,19 +54,19 @@
 
     <form id="form" method="POST" action="">
       <h2>Find your perfect feline friend.</h2>
-      <section>
+      <fieldset>
         <p class="allCatsSection">
           I dont want to search, show me all the cat breeds.
         </p>
         <div class="showAllCatsButton">
           <button class="allCatsButton" type="button">Show All Cats</button>
         </div>
-      </section>
+      </fieldset>
       <p class="formInstructions">
         Choose your options based on your needs where: 1 = not very and 5 = very
       </p>
-      <section>
-        <h4>Fitting into your family</h4>
+      <fieldset>
+        <legend>Fitting into your family</legend>
         <div>
           <label for="dogFriendly">Dog-friendly</label>
           <select id="dogFriendly" name="dogFriendly">
@@ -82,9 +82,9 @@
           <label for="hypoallergenic"> Hypoallergenic</label>
           <input type="checkbox" id="hypoallergenic" name="hypoallergenic" />
         </div>
-      </section>
-      <section>
-        <h4>Fitting into your lifestyle</h4>
+      </fieldset>
+      <fieldset>
+        <legend>Fitting into your lifestyle</legend>
         <div>
           <label for="coatLength">Coat Length</label>
           <select id="coatLength" name="coatLength">
@@ -131,14 +131,14 @@
             <option value="5">5</option>
           </select>
         </div>
-      </section>
-      <section>
-        <h4>Other options</h4>
+      </fieldset>
+      <fieldset>
+        <legend>Other options</legend>
         <div>
           <label for="rare"> Rare</label>
           <input type="checkbox" id="rare" name="rare" />
         </div>
-      </section>
+      </fieldset>
       <div class="submitButton">
         <button type="submit">Search</button>
       </div>
