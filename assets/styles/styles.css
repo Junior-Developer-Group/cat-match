@@ -29,47 +29,6 @@ body {
   color: var(--black);
 }
 
-.hero-section{
-}
-
-.hero-heading{
-    font-size: 65px;
-    line-height: 65px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.hero-sub-heading{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.hero-svg{
-    width: 50%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    background: #6C63FF;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .intro {
     display: flex;
     flex-direction: column;
@@ -122,12 +81,6 @@ text-align:center;
   max-width: 65ch;
 }
 /* ch is based on character width */
-    padding-bottom: 15px;}
-.intro h2 {color: var(--black);
-    text-align: center;}
-.intro p {/*text-indent: 2em;*/
-    max-width: 65ch;}
-    /* ch is based on character width */
 
 #form {
   display: flex;
@@ -139,17 +92,6 @@ text-align:center;
   padding: 1rem;
   margin: auto;
   border-radius: 0.7em;
-#form{
-display: flex;
-flex-direction:column;
-align-items: center;
-letter-spacing: 0.01em;
-width:95%;
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-padding: 1rem;
-margin: auto;
-border-radius: 0.7em;
-
 }
 
 #form section {
@@ -158,46 +100,28 @@ border-radius: 0.7em;
   width: 100%;
   padding: 0.5em;
   margin: 0.5em;
-#form section{
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-border-radius: 0.7em;
-width:100%;
-padding:0.5em;
-margin:0.5em;
 }
 
 #form p {
   width: 100%;
   text-align: center;
-#form p{
-width:100%;
-text-align:center;
 }
 
 .formInstructions {
   font-weight: bold;
   font-size: 0.8em;
-.formInstructions{
-font-weight:bold;
-font-size:0.8em;
 }
 
 .allCatsSection {
   font-size: 0.8em;
-.allCatsSection{
-font-size:0.8em;
 }
 
 #form h4 {
   text-align: center;
-#form h4{
-text-align:center;
 }
 
 #form h2 {
   text-align: center;
-#form h2{
-text-align:center;
 }
 
 #form div {
@@ -206,23 +130,12 @@ text-align:center;
   width: 100%;
   padding: 1em;
   font-size: 0.8em;
-#form div{
-display:flex;
-justify-content:space-between;
-width:100%;
-padding:1em;
-font-size:0.8em;
 }
 
 input[type='checkbox'] {
   position: relative;
   cursor: pointer;
   padding: 1em;
-
-input[type=checkbox] {
-position: relative;
-cursor: pointer;
-padding:1em;
 }
 
 input[type='checkbox']:before {
@@ -236,18 +149,6 @@ input[type='checkbox']:before {
   left: 0;
   background-color: var(--light-grey);
   border: 0.05em solid var(--black);
-
-input[type=checkbox]:before {
-margin-right:0.5em;
-content: "";
-display: block;
-position: absolute;
-width: 1.28em;
-height: 1.28em;
-top: 0;
-left: 0;
-background-color:var(--light-grey);
-border:0.05em solid var(--black);
 }
 
 input[type='checkbox']:checked:before {
@@ -259,15 +160,6 @@ input[type='checkbox']:checked:before {
   top: 0;
   left: 0;
   background-color: var(--purple);
-input[type=checkbox]:checked:before {
-content: "";
-display: block;
-position: absolute;
-width: 1.28em;
-height: 1.28em;
-top: 0;
-left: 0;
-background-color:var(--purple);
 }
 
 input[type='checkbox']:checked:after {
@@ -279,65 +171,14 @@ input[type='checkbox']:checked:after {
   color: var(--white);
   position: absolute;
   left: 0.3em;
-input[type=checkbox]:checked:after {
-content: "\2713";
-display: block;
-text-align:center;
-width: 0.3em;
-height:0.65em;
-color:var(--white);
-position: absolute;
-left: 0.3em;
 }
 
-<<<<<<< HEAD
-.hero-heading{
-    font-size: 70px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-.hero-sub-heading{
-    text-align: center;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.hero-svg{
-    width: 30%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 200px;
-    height: 40px;
-    background: #6C63FF;
-    border-radius: 30px;
-}
-
-=======
 .showAllCatsButton {
   text-align: center;
->>>>>>> 68ec872e274fd9a2e240b0dba0d03e1142963a46
-.showAllCatsButton{
-text-align:center;
 }
 
 .submitButton {
   text-align: center;
-.submitButton{
-text-align:center;
 }
 
 #form button {
@@ -350,24 +191,11 @@ text-align:center;
   padding: 1em 3.5em;
   border-radius: 0.5em;
   transition-duration: 0.4s;
-#form button{
-width:80%;
-margin:auto;
-background-color:var(--purple);
-border:none;
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-color:var(--white);
-padding:1em 3.5em;
-border-radius: 0.5em;
-transition-duration: 0.4s;
-
 }
 
 #form button:hover {
   background-color: var(--light-purple);
   color: var(--white);
-background-color: var(--light-purple);
-color: var(--white);
 }
 
 select {
@@ -378,29 +206,16 @@ select {
   border-radius: 0.3em;
   overflow: hidden;
   position: relative;
-select{
-font-size: 0.8em;
-padding: 0.6em 0.5em 0.6em 0.8em;
-background: var(--white);
-border: 0.06em solid var(--very-light-grey);
-border-radius: 0.3em;
-overflow: hidden;
-position: relative;
 }
 
 select:hover {
   background-color: var(--light-grey);
-background-color: var(--light-grey);
 }
 
 @media only screen and (min-width: 48em) {
   .intro p {
     font-size: 1.2em;
   }
-
-.intro p {
-font-size: 1.2em;
-}
 
   #form {
     width: 80%;
@@ -413,70 +228,6 @@ font-size: 1.2em;
     font-weight: bold;
     font-size: 1em;
   }
-#form{
-
-width:80%;
-padding:2em;
-}
-#form button{
-width:50%;
-}
-.formInstructions{
-font-weight:bold;
-font-size:1em;
-}
-
-<<<<<<< HEAD
-#form button{
-font-size:1.3em;
-}
-
-.hero-heading{
-    font-size: 150px;
-    font-size: 70px;
-    text-align: center;
-    font-weight: 500;
-    text-shadow: 0px 2px 4px #000;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-.hero-sub-heading{
-    text-align: center;
-    font-weight: normal;
-    font-size: 50px;
-    margin-top: 50px;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.hero-svg{
-    width: 45%;
-    width: 30%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 300px;
-    height: 90px;
-    font-size: 36px;
-    width: 200px;
-    height: 40px;
-    background: #6C63FF;
-    border-radius: 30px;
-}
-
-=======
 }
 
 @media only screen and (min-width: 64.5em) {
@@ -484,40 +235,22 @@ font-size:1.3em;
     font-size: 1.4em;
   }
 
-.intro {
-font-size: 1.4em;
-}
-
   #form {
     width: 55%;
     padding: 3em;
   }
-#form{
-width:55%;
-padding:3em;
-
-}
 
   #form section {
     padding: 1.5em;
   }
-#form section{
-padding:1.5em;
-}
 
   #form div {
     font-size: 1.2em;
   }
-#form div{
-font-size:1.2em;
-}
 
   .formInstructions {
     font-size: 1.4em;
   }
-.formInstructions {
-font-size:1.4em;
-}
 
   .allCatsSection {
     font-size: 1.2em;
@@ -528,64 +261,11 @@ font-size:1.4em;
   #form h4 {
     font-size: 1.3em;
   }
-.allCatsSection{
-font-size:1.2em;
-}
-#form h2{
-font-size:2.2em;
-}
-#form h4{
-font-size:1.3em;
-}
 
   #form button {
     font-size: 1.3em;
   }
->>>>>>> 68ec872e274fd9a2e240b0dba0d03e1142963a46
-#form button{
-font-size:1.3em;
 }
-
-.hero-heading{
-    font-size: 150px;
-    text-align: center;
-    font-weight: 500;
-    text-shadow: 0px 2px 4px #000;
-    margin-bottom: 0px;
-}
-
-.hero-sub-heading{
-    text-align: center;
-    font-weight: normal;
-    font-size: 50px;
-    margin-top: 50px;
-}
-.hero-svg-section{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.hero-svg{
-    width: 45%;
-}
-
-.hero-button{
-    border: none;
-    color: #fff;
-    width: 300px;
-    height: 90px;
-    font-size: 36px;
-    background: #6C63FF;
-    border-radius: 30px;
-}
-
-}
-
-
 
 footer button {
   background: var(--white);
@@ -599,12 +279,10 @@ footer button {
   display: none;
 
   position: fixed;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  border: 0.05em solid var(--opaque-black);
   border-radius: 0.4em;
   /* Glassmorphism effect */
   color: var(--dark-grey);
@@ -617,7 +295,6 @@ footer button {
   width: 80%;
   height: 80%;
   z-index: 5;
-  width: fit-content;
 }
 
 #modal a {
@@ -650,7 +327,6 @@ footer button,
 
 #modal button {
   background: var(--light-sea-green);
-  background: var(--purple);
   color: var(--white);
 
   letter-spacing: 0.04em;
@@ -673,7 +349,6 @@ footer button,
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  align-items: stretch;
 
   margin: 0.5em 2em 1em;
   height: 80%;
@@ -762,7 +437,6 @@ footer {
 
 .loader {
 
-
   display: none;
   margin-left: auto;
   margin-right: auto;
@@ -773,6 +447,5 @@ footer {
 
 .loader.display{
   display: block;
-
 
 }
