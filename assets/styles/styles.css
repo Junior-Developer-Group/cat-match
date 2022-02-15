@@ -213,20 +213,35 @@ select:hover {
 }
 
   .hero-heading{
-    font-size: 5em;
+    /* 72px using 16px = 1em */
+    font-size: 4.5em;
+
+    /* 16px */
     line-height: 1em;
     text-align: center;
     font-weight: 500;
-    text-shadow: 0em 0.003em 0.03em #000;
+
+    /* 0px 0.32px 0.48px  */
+    text-shadow: 0em 0.02em 0.03em #1d1d1d;
+
+    /* 0.8px */
     margin-bottom: 0.05em;
-    margin-top: 0.3125em;
+
+    /* 0px */
+    margin-top: 0em;
 }
 
 .hero-sub-heading{
     text-align: center;
-    font-weight: normal;
+    font-weight: 500;
+
+    /* 24px  */
     font-size: 1.5em;
+
+    /* 0px  */
     margin-top: 0em;
+
+    /* 8px  */
     margin-bottom: 0.5em;
 }
 .hero-svg-section{
@@ -235,21 +250,34 @@ select:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2em;
+
+    /* 16px  */
+    margin-top: 1em;
 }
 
 .hero-svg{
+    /* 400px  */
     width: 25em;
 }
 
 .hero-button{
     border: none;
     color: #fff;
+
+    /* 140px  */
     width: 8.75em;
+
+    /* 40px  */
     height: 2.5em;
+
+    /* 24px  */
     font-size: 1.5em;
     background: #6C63FF;
+
+    /* 11.2px  */
     border-radius: 0.7em;
+
+    /* 16px  */
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -270,20 +298,37 @@ select:hover {
     font-weight: bold;
     font-size: 1em;
   }
+  .hero-section {
+    /* 640px  */
+    height: 40em;
+  }
   .hero-heading{
+    /* 112px  */
     font-size: 7em;
     text-align: center;
     font-weight: 500;
-    text-shadow: 0em 0.003em 0.03em #000;
+
+    /* 0px 0.32px 0.48px  */
+    text-shadow: 0em 0.02em 0.03em #1d1d1d;
+
+    /* 1.44px  */
     margin-bottom: 0.09em;
+
+    /* 5px  */
     margin-top: 0.3125em;
 }
 
 .hero-sub-heading{
     text-align: center;
-    font-weight: normal;
+    font-weight: 500;
+
+    /* 32px  */
     font-size: 2em;
+
+    /* 16px  */
     margin-top: 1em;
+
+    /* 0px  */
     margin-bottom: 0em;
 }
 .hero-svg-section{
@@ -292,20 +337,31 @@ select:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    /* 32px  */
     margin-top: 2em;
 }
 
 .hero-svg{
+    /* 480px  */
     width: 30em;
 }
 
 .hero-button{
     border: none;
     color: #fff;
+
+    /* 140px  */
     width: 8.75em;
+
+    /* 40px  */
     height: 2.5em;
+
+    /* 24px  */
     font-size: 1.5em;
     background: #6C63FF;
+
+    /* 11.2px  */
     border-radius: 0.7em;
 }
 }
@@ -346,21 +402,36 @@ select:hover {
     font-size: 1.3em;
   }
 
+  .hero-section {
+    /* 800px  */
+    height: 50em;
+  }
+
   .hero-heading{
+    /* 144px  */
     font-size: 9em;
     text-align: center;
     font-weight: 500;
-    text-shadow: 0em 0.003em 0.03em #000;
-    margin-bottom: 0.09em;
-    margin-top: 0.3125em;
+
+    /* 0px 0.32px 0.48px  */
+    text-shadow: 0em 0.02em 0.03em #1d1d1d;
+
+    /* 0.144px  */
+    margin-bottom: 0.009em;
+
+    /* 0.08px  */
+    margin-top: 0.005em;
 }
 
 .hero-sub-heading{
     text-align: center;
-    font-weight: normal;
+    font-weight: 500;
+
+    /* 48px  */
     font-size: 3em;
-    margin-top: 1em;
-    margin-bottom: 0em;
+
+    /* 0.8px  */
+    margin-top: 0.05em;
 }
 .hero-svg-section{
     text-align: center;
@@ -368,20 +439,31 @@ select:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    /* 32px  */
     margin-top: 2em;
 }
 
 .hero-svg{
+    /* 640px  */
     width: 40em;
 }
 
 .hero-button{
     border: none;
     color: #fff;
+
+    /* 172px  */
     width: 10.75em;
+
+    /* 42px  */
     height: 2.625em;
+
+    /* 36px  */
     font-size: 2.25em;
     background: #6C63FF;
+
+    /* 14px  */
     border-radius: 0.875em;
 }
 }
