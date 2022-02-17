@@ -12,16 +12,14 @@
   --dark-sea-green: #155e46;
   --very-light-grey: #ccc;
 
-  --modal-light-grey:rgba(250, 249, 249, 0.55);
-  --modal-shadow:rgba(0, 0, 0, 0.1);
+  --modal-light-grey: rgba(250, 249, 249, 0.55);
+  --modal-shadow: rgba(0, 0, 0, 0.1);
   --modal-border: #6c63ff;
-  
 }
 
 * {
   box-sizing: border-box;
 }
-
 
 body {
   background: var(--white);
@@ -30,45 +28,43 @@ body {
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 15px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+}
 
 .intro h2 {
-    color: var(--black);
-    text-align: center;
-  }
+  color: var(--black);
+  text-align: center;
+}
 .intro p {
   /*text-indent: 2em;*/
-    max-width: 65ch;
-}/* ch is based on character width */
+  max-width: 65ch;
+} /* ch is based on character width */
 
-#form{
-display: flex;
-flex-direction:column;
-align-items: center;
-letter-spacing: 0.01em;
-width:95%;
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-padding: 1rem;
-margin: auto;
-border-radius: 0.7em;
- 
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.01em;
+  width: 95%;
+  box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin: auto;
+  border-radius: 0.7em;
 }
 
-#form fieldset{
-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.25);
-border-radius: 0.7em;
-width:100%;
-padding:0.5em;
-margin:0.5em;
+#form fieldset {
+  border: none;
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em;
 }
 
-#form p{
-width:100%;
-text-align:center;
+#form p {
+  width: 100%;
+  text-align: center;
 }
 
 .intro h2 {
@@ -436,7 +432,6 @@ footer {
 /* Preloader styles */
 
 .loader {
-  
   display: none;
   margin-left: auto;
   margin-right: auto;
@@ -445,7 +440,6 @@ footer {
   width: 250px;
 }
 
-.loader.display{
+.loader.display {
   display: block;
-  
 }
