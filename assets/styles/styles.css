@@ -190,6 +190,10 @@ input[type='checkbox']:checked:after {
   transition-duration: 0.4s;
 }
 
+#form .submitButton > button {
+  margin: 0.5em;
+}
+
 #form button:hover {
   background-color: var(--light-purple);
   color: var(--white);
