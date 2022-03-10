@@ -286,6 +286,39 @@ option {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+#cardContainer {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  width:80%;
+  margin:auto;
+  padding:1.5em;
+}
+.card-wrapper{
+  display:flex;
+  flex-direction:row;
+
+}
+.card{
+  display:flex;
+  flex-direction:column;
+  width:30%;
+  border: 1px solid black;
+  border-radius:20px;
+ 
+}
+
+.cardImage{
+  width:100%;
+  height:fit-content;
+  padding:5px;
+  border-radius:20px;
+  
+}
+.catDetails{
+  padding:5px;
+  flex-grow:1;
+}
 
 @media only screen and (min-width: 48em) {
   .intro p {

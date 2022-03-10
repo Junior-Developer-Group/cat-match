@@ -7,6 +7,19 @@ const allCatsButton = document.querySelector(".allCatsButton");
 const loader = document.querySelector(".loader");
 let catResults;
 let catBreeds;
+this.baseUrl = 'https://api.thecatapi.com/v1/';
+
+async function getAllCatBreeds(){
+    let response = null;
+    try {
+        response = await axios.get(`${this.baseUrl}breeds`);
+    }
+    catch (error){
+        console.error(error);
+    }
+
+    return response;
+}
 
 submitButton.addEventListener("click", async (e) => {
   displayLoader();
@@ -41,7 +54,27 @@ submitButton.addEventListener("click", async (e) => {
   }
   console.log(catBreeds);
   console.log(catResults);
+  //loop over cat results and display on site
+  //get whre the cat cards container is going to go
+  const cardContainer = document.getElementById("cardContainer");
+  catResults.map(cat =>{
+    // let cardDiv=document.createElement("div");
+    card =
+     ` <div class="card">
+      <img class = "cardImage"src="${cat.image.url}" alt="Cat image">
+      <h1>${cat.name}</h1>
+      <div class = "catDetails">
+      <p class="cardTitle">${cat.description}</p>
+      <p>Temperament: ${cat.temperament}</p>
+      <a class = "flexible" href="${cat.wikipedia_url}">More information on this breed</a>
+      </div>
+    </div>`;
+    
+    cardContainer.innerHTML +=card
+  })
 });
+
+
 function displayLoader() {
   loader.classList.add("display");
   loader.setAttribute("aria-expanded", "true");
