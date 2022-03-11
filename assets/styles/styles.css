@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 15px;
+  padding: 20px;
 }
 
 .intro h2 {
@@ -60,6 +60,7 @@ body {
   width: 100%;
   padding: 0.5em;
   margin: 0.5em;
+  margin-top: 40px;
 }
 
 #form p {
@@ -70,6 +71,7 @@ body {
 .intro h2 {
   color: var(--black);
   text-align: center;
+  font-size: 30px;
 }
 
 .intro p {
@@ -108,6 +110,11 @@ body {
   font-size: 0.8em;
 }
 
+legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .allCatsSection {
   font-size: 0.8em;
 }
@@ -120,7 +127,7 @@ body {
   text-align: center;
 }
 
-#form div {
+#form fieldset div {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -174,8 +181,11 @@ input[type='checkbox']:checked:after {
   text-align: center;
 }
 
-.submitButton {
+div.submitButton  button{
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
 }
 
 #form button {
@@ -207,6 +217,8 @@ select {
   border-radius: 0.3em;
   overflow: hidden;
   position: relative;
+  min-width: 200px;
+  font-size: 14px;
 }
 
 select:hover {
@@ -287,6 +299,10 @@ option {
     margin-bottom: 1em;
 }
 #cardContainer {
+  display:none;
+}
+
+#cardContainer.display {
   display:flex;
   flex-wrap:wrap;
   justify-content: space-between;
@@ -303,26 +319,71 @@ option {
   display:flex;
   flex-direction:column;
   width:30%;
-  border: 1px solid black;
+  box-shadow: 0 0 50px #ccc;
   border-radius:20px;
- 
+  margin: 10px;
+  margin-bottom: 40px;
 }
+
+.card:hover {
+  background: #fee0ed;
+}
+
+
 
 .cardImage{
   width:100%;
-  height:fit-content;
-  padding:5px;
-  border-radius:20px;
+  height:200px;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
   
 }
+
+.card:hover .cardImage {
+  transform: scale(1.02);
+  transition: all .5s;
+}
+
 .catDetails{
   padding:5px;
   flex-grow:1;
+
+}
+
+.card h1 {
+  text-align: center;
+}
+.card:hover  h1 {
+  color: white;
+  -webkit-text-stroke: 1px #1a1717;
+  -webkit-text-fill-color: white;
+
+  text-shadow: 3px 2px 0 grey, 1px -1px 0 grey, -1px 1px 0 grey, 1px 1px 0 grey
+}
+
+.catDetails__inner {
+  padding: 20px;
+}
+
+.catDetails__inner a.flexible {
+  color: var(--dark-grey);
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+
+}
+
+.catDetails__inner a.flexible:hover,
+.catDetails__inner a.flexible:visited {
+  color: var(--purple);
 }
 
 @media only screen and (min-width: 48em) {
   .intro p {
-    font-size: 1.2em;
+    font-size: 20px;
   }
 
   #form {
@@ -418,7 +479,7 @@ option {
     padding: 1.5em;
   }
 
-  #form div {
+  #form fieldset div {
     font-size: 1.2em;
   }
 
