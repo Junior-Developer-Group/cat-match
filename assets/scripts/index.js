@@ -3,6 +3,7 @@ const allcats = document.getElementById("allcats");
 const submitButton = document.querySelector(".submitButton");
 const form = document.getElementById("form");
 const allCatsButton = document.querySelector(".allCatsButton");
+const catcatParagraph = document.getElementById('catParagraph');
 
 const loader = document.querySelector(".loader");
 let catResults;
@@ -36,9 +37,10 @@ submitButton.addEventListener("click", async (e) => {
       console.log(result.data);
 
       catBreeds = result.data;
-
+      
       if(catBreeds.length > 0 ) {
         hideLoader();
+        hideCatContainerParagraph();
       }
 
       //Code for displaying the cats based on the input search parameters goes here.
@@ -60,7 +62,13 @@ submitButton.addEventListener("click", async (e) => {
           cat.rare === userValues.rare
         );
       });
+
+      if (catResults == 0) {
+        displayCatContainerParagraph();
+      }
     }
+
+
   console.log(catBreeds);
   console.log(catResults);
   //loop over cat results and display on site
@@ -121,6 +129,15 @@ function displayCatContainer() {
 function hideCatContainer() {
   cardContainer.classList.remove('display');
   cardContainer.innerHTML = '';
+}
+
+function displayCatContainerParagraph() {
+  catParagraph.classList.add('display');
+
+}
+
+function hideCatContainerParagraph() {
+  catParagraph.classList.remove('display');
 }
 
 function displayLoader() {

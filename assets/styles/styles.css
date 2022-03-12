@@ -81,6 +81,22 @@ body {
 }
 /* ch is based on character width */
 
+.no-cat-paragraph {
+  display: none;
+}
+
+.no-cat-paragraph.display {
+  display: block;
+  padding: 5px 10px;
+  background-color: var(--light-purple);
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+
+  width: 40%;
+  border-radius: 8px;
+}
+
 #form {
   display: flex;
   flex-direction: column;
@@ -776,6 +792,10 @@ footer {
 
   #form {
     width: 100%;
+  }
+
+  .no-cat-paragraph.display {
+    width: 80%;
   }
 }
 
