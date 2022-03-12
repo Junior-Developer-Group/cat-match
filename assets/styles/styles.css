@@ -354,7 +354,7 @@ option {
 
 .cardImage{
   width:100%;
-  height:200px;
+  height:350px;
 
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -890,5 +890,19 @@ footer {
   #form fieldset div {
     display: flex;
     flex-direction: column;
+  }
+
+  .cardImage{
+    width:100%;
+    height:220px;
+  
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: unset;
+    
+  }
+
+  #cardContainer.display {
+    padding: 0;
   }
 }
