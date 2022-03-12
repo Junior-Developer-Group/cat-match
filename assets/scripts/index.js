@@ -7,6 +7,7 @@ const allCatsButton = document.querySelector(".allCatsButton");
 const loader = document.querySelector(".loader");
 let catResults;
 let catBreeds;
+
 this.baseUrl = 'https://api.thecatapi.com/v1/';
 
 async function getAllCatBreeds(){
@@ -63,17 +64,14 @@ submitButton.addEventListener("click", async (e) => {
   console.log(catBreeds);
   console.log(catResults);
   //loop over cat results and display on site
-  //get whre the cat cards container is going to go
-  const cardContainer = document.getElementById("cardContainer");
-  
-  displayCatContainer();
+   //get whre the cat cards container is going to go
+   const cardContainer = document.getElementById("cardContainer");
 
   catResults.map(cat =>{
     // let cardDiv=document.createElement("div");
     card =
      ` <div class="card">
-      <img class = "cardImage"src="${cat.image.url}" alt="${cat.name}">
-
+     ${cat.image?`<img class = "cardImage"src="${cat.image.url}" alt="${cat.name}">`:``}
       <div class = "catDetails">
         <div class= "catDetails__inner">
         <h1>${cat.name}</h1>
@@ -83,9 +81,12 @@ submitButton.addEventListener("click", async (e) => {
         </div>
       </div>
     </div>`;
-    
+
     cardContainer.innerHTML +=card;
+    
   })
+
+    displayCatContainer();
 });
 
 
@@ -108,16 +109,18 @@ function getUserInputs() {
 
 function resetSearchForm() {
   form.reset();
-  catResults = null;
+
 }
 
 
 function displayCatContainer() {
   cardContainer.classList.add('display');
+
 }
 
 function hideCatContainer() {
   cardContainer.classList.remove('display');
+  cardContainer.innerHTML = '';
 }
 
 function displayLoader() {
