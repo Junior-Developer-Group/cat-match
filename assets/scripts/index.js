@@ -150,3 +150,8 @@ function hideLoader() {
   loader.classList.remove("display");
   loader.setAttribute("aria-expanded", "false");
 }
+
+function ninjaClick() {
+  submitButton.click()
+  document.getElementById('submit').scrollIntoView();
+}
