@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin-bottom: 40px;
 }
 
 .intro h2 {
@@ -396,7 +397,10 @@ option {
   }
   .hero-section {
     /* 640px  */
-    height: 40em;
+    height: 60em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .hero-heading{
     /* 112px  */
@@ -465,10 +469,6 @@ option {
     font-size: 1.4em;
   }
 
-  #form {
-    width: 55%;
-    padding: 3em;
-  }
 
   #form section {
     padding: 1.5em;
@@ -498,7 +498,11 @@ option {
 
   .hero-section {
     /* 800px  */
-    height: 50em;
+    height: 60em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .hero-heading{
@@ -738,4 +742,86 @@ footer {
 
 .loader.display {
   display: block;
+}
+
+@media (max-width: 980px) {
+
+  #cardContainer.display {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+  #cardContainer.display .card {
+    width: 45%;
+  }
+
+  #form {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .hero-section {
+    display: flex;
+    height: 55em;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #cardContainer.display .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-section h1 {
+    font-size: 50px;
+  }
+
+  .hero-section .hero-sub-heading {
+    font-size: 28px;
+    word-break: break-word;
+    margin-top: 20px;
+  }
+
+  .hero-svg-section img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .hero-section button {
+    margin-top: 20px;
+  }
+
+  #cardContainer.display .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section {
+    height: 55em;
+  }
+
+  .intro {
+    margin-bottom: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 40px;
+  }
+
+  .showAllCatsButton {
+    width: 100%;
+  }
+
+  .allCatsButton {
+    width: 100%;
+  }
+  
+  #form fieldset div {
+    display: flex;
+    flex-direction: column;
+  }
 }
