@@ -651,8 +651,27 @@ footer button,
 }
 
 .scroll-top-wrapper {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+}
+
+.scroll-top-wrapper a {
   display: flex;
-  justify-content: center;
+  align-items: baseline;
+}
+
+.scroll-top-wrapper span:first-of-type {
+  margin-right: 10px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-bottom: 10px solid white;
 }
 
 .scroll-top {
@@ -772,6 +791,7 @@ footer {
   #cardContainer.display .card {
     width: 80%;
   }
+
 }
 
 @media (max-width: 500px) {
@@ -796,6 +816,10 @@ footer {
 
   #cardContainer.display .card {
     width: 100%;
+  }
+
+  .scroll-top-wrapper a span:last-of-type{
+    display: none;
   }
 }
 
