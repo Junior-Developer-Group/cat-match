@@ -238,9 +238,6 @@ option {
     text-align: center;
     font-weight: 500;
 
-    /* 0px 0.32px 0.48px  */
-    text-shadow: 0em 0.02em 0.03em #1d1d1d;
-
     /* 0.8px */
     margin-bottom: 0.05em;
 
@@ -407,8 +404,6 @@ option {
     text-align: center;
     font-weight: 500;
 
-    /* 0px 0.32px 0.48px  */
-    text-shadow: 0em 0.02em 0.03em #1d1d1d;
 
     /* 1.44px  */
     margin-bottom: 0.09em;
@@ -511,9 +506,6 @@ option {
     font-size: 9em;
     text-align: center;
     font-weight: 500;
-
-    /* 0px 0.32px 0.48px  */
-    text-shadow: 0em 0.02em 0.03em #1d1d1d;
 
     /* 0.144px  */
     margin-bottom: 0.009em;
