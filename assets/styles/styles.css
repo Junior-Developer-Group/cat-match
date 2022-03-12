@@ -453,7 +453,7 @@ option {
     /* 0px  */
     margin-bottom: 0em;
 }
-.hero-svg-section{
+.hero-svg-section {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -462,6 +462,10 @@ option {
 
     /* 32px  */
     margin-top: 2em;
+}
+
+.hero-svg-section img {
+  margin-right: 50px;
 }
 
 .hero-svg{
@@ -824,6 +828,7 @@ footer {
     display: flex;
     height: 55em;
     flex-direction: column;
+    justify-content: center;
   }
 
   #cardContainer.display .card {
