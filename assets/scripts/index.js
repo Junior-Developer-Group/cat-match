@@ -22,17 +22,17 @@ async function getAllCatBreeds(){
 }
 
 submitButton.addEventListener("click", async (e) => {
-    
+
     displayLoader();
     e.preventDefault();
     getUserInputs();
-    // console.log(userValues);
+    console.log(userValues);
 
     let result = await getAllCatBreeds();
 
     if (result) {
 
-      // console.log(result.data);
+      console.log(result.data);
 
       catBreeds = result.data;
 
@@ -65,6 +65,7 @@ submitButton.addEventListener("click", async (e) => {
   //loop over cat results and display on site
   //get whre the cat cards container is going to go
   const cardContainer = document.getElementById("cardContainer");
+  
   displayCatContainer();
 
   catResults.map(cat =>{
@@ -83,7 +84,7 @@ submitButton.addEventListener("click", async (e) => {
       </div>
     </div>`;
     
-    cardContainer.innerHTML +=card
+    cardContainer.innerHTML +=card;
   })
 });
 
@@ -106,16 +107,8 @@ function getUserInputs() {
 }
 
 function resetSearchForm() {
-  const inputs = form.elements;
-  for (const input of inputs) {
-    if (input.type == "checkbox" || input.type == "select-one") {
-      if (input.type == "checkbox") {
-        input.checked = false;
-      } else if (input.type == "select-one") {
-        input.value = "";
-      }
-    }
-  }
+  form.reset();
+  catResults = null;
 }
 
 
