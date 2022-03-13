@@ -33,19 +33,29 @@ submitButton.addEventListener("click", async (e) => {
     let result = await getAllCatBreeds();
 
     if (result) {
-
       console.log(result.data);
-
       catBreeds = result.data;
-      
       if(catBreeds.length > 0 ) {
         hideLoader();
         hideCatContainerParagraph();
       }
-
+      //specify local images for the persian ,european and burmese cat as the api does not have images for these.
+      catBreeds.forEach(cat=>{
+        if (cat.name =="Persian"){
+          cat.image.url = "../assets/images/persiancat.jpg"
+        }else if(cat.name == "European Burmese"){
+          cat.image = {url: "../assets/images/europeanBurmese.jpeg"};
+          cat.wikipedia_url="https://en.wikipedia.org/wiki/Burmese_cat";
+        }else if (cat.name == "Malayan"){
+          cat.image={url:"../assets/images/malayan.jpeg"};
+        }
+      })
       //Code for displaying the cats based on the input search parameters goes here.
       catResults = catBreeds.filter((cat) => {
         return (
+          (userValues.grooming
+            ? cat.grooming === userValues.grooming
+            : cat.grooming) &&
           (userValues.active
             ? cat.energy_level === userValues.active
             : cat.energy_level) &&
@@ -68,15 +78,14 @@ submitButton.addEventListener("click", async (e) => {
       }
     }
 
-
+  
   console.log(catBreeds);
   console.log(catResults);
-  //loop over cat results and display on site
+ 
    //get whre the cat cards container is going to go
-   const cardContainer = document.getElementById("cardContainer");
+  const cardContainer = document.getElementById("cardContainer");
 
   catResults.map(cat =>{
-    // let cardDiv=document.createElement("div");
     card =
      ` <div class="card">
      ${cat.image?`<img class = "cardImage"src="${cat.image.url}" alt="${cat.name}">`:``}
@@ -85,6 +94,8 @@ submitButton.addEventListener("click", async (e) => {
         <h1>${cat.name}</h1>
         <p class="card__description">${cat.description}</p>
         <p><strong>Temperament</strong>: <br> ${cat.temperament}</p>
+        <p><strong>Origins</strong>: ${cat.origin}</p>
+        <p><strong>Life-Span</strong>: ${cat.life_span} years</p>
         <a class = "flexible" href="${cat.wikipedia_url}">More information on this breed</a>
         </div>
       </div>
