@@ -41,6 +41,7 @@ submitButton.addEventListener("click", async (e) => {
       }
       //specify local images for the persian ,european and burmese cat as the api does not have images for these.
       catBreeds.forEach(cat=>{
+        console.log(cat.grooming);
         if (cat.name =="Persian"){
           cat.image.url = "../assets/images/persiancat.jpg"
         }else if(cat.name == "European Burmese"){
