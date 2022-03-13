@@ -33,7 +33,6 @@ submitButton.addEventListener("click", async (e) => {
     let result = await getAllCatBreeds();
 
     if (result) {
-      console.log(result.data);
       catBreeds = result.data;
       if(catBreeds.length > 0 ) {
         hideLoader();
@@ -41,9 +40,6 @@ submitButton.addEventListener("click", async (e) => {
       }
       //specify local images for the persian ,european and burmese cat as the api does not have images for these.
       catBreeds.forEach(cat=>{
-        if (cat.hypoallergenic === 1 ){
-          console.log (cat.name)
-        }
         if (cat.name =="Persian"){
           cat.image.url = "../assets/images/persiancat.jpg"
         }else if(cat.name == "European Burmese"){
@@ -78,9 +74,8 @@ submitButton.addEventListener("click", async (e) => {
    //get where the cat cards container is going to go
   const cardContainer = document.getElementById("cardContainer");
 
-  let cats = catResults? catResults : catBreeds;
-  
-  cats.map(cat =>{
+   
+  catResults.map(cat =>{
     card =
      ` <div class="card">
      ${cat.image?`<img class = "cardImage"src="${cat.image.url}" alt="${cat.name}">`:``}
