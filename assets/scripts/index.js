@@ -50,18 +50,23 @@ submitButton.addEventListener("click", async (e) => {
         }
       })
       //Code for displaying the cats based on the input search parameters goes here.
-      catResults = catBreeds.filter((cat) => {
-        return (
+      if (userValues.all){
+        catResults = catBreeds;
+      }else {
+        catResults = catBreeds.filter((cat) => {
+          return (
           userValues.grooming       ? cat.grooming === userValues.grooming : 
           userValues.active         ? cat.energy_level === userValues.active : 
           userValues.dogFriendly    ? cat.dog_friendly === userValues.dogFriendly :
           userValues.friendly       ? cat.stranger_friendly === userValues.friendly : 
           userValues.intelligence   ? cat.intelligence === userValues.intelligence : 
           userValues.hypoallergenic ? cat.hypoallergenic === userValues.hypoallergenic :
-          userValues.rare           ? cat.rare === userValues.rare :
-          userValues.all            ? userValues.all : null
-        );
-      });
+          userValues.rare           ? cat.rare === userValues.rare :null
+     
+          );
+        });
+      }
+      
 
       if (catResults == 0) {
         displayCatContainerParagraph();
