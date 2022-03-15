@@ -23,16 +23,13 @@ async function getAllCatBreeds(){
     catch (error){
         console.error(error);
     }
-
     return response;
 }
 
 submitButton.addEventListener("click", async (e) => {
-
     displayLoader();
     e.preventDefault();
     getUserInputs();
-    console.log(userValues);
 
     let result = await getAllCatBreeds();
 
@@ -53,37 +50,36 @@ submitButton.addEventListener("click", async (e) => {
           cat.image={url:"../assets/images/malayan.jpeg"};
         }
       })
+      //check if we have anything in uservalues, if nothing then the form hasent been filled in at all and we display message and return
+      const checkValues=Object.values(userValues).every((v) => v === 0);
+      if (checkValues){
+       displayCatContainerParagraph();
+       return
+      }
       //Code for displaying the cats based on the input search parameters goes here.
       if (userValues.all){
         catResults = catBreeds;
       }else {
         catResults = catBreeds.filter((cat) => {
           return (
-          userValues.grooming       ? cat.grooming === userValues.grooming : 
-          userValues.active         ? cat.energy_level === userValues.active : 
-          userValues.dogFriendly    ? cat.dog_friendly === userValues.dogFriendly :
-          userValues.friendly       ? cat.stranger_friendly === userValues.friendly : 
-          userValues.intelligence   ? cat.intelligence === userValues.intelligence : 
-          userValues.hypoallergenic ? cat.hypoallergenic === userValues.hypoallergenic :
-          userValues.rare           ? cat.rare === userValues.rare :null
-     
+           (!userValues.rare| cat.rare=== userValues.rare) && 
+           (!userValues.hypoallergenic || cat.hypoallergenic === userValues.hypoallergenic) && 
+           (!userValues.active || cat.energy_level === userValues.energy_level)&&
+           (!userValues.dogFriendly || cat.dog_friendly===userValues.dogFriendly)&&
+           (!userValues.grooming || cat.grooming === userValues.grooming)&&
+           (!userValues.intelligence || cat.intelligence===userValues.intelligence)&&
+           (!userValues.friendly || cat.stranger_friendly ===userValues.friendly)
           );
         });
       }
-      
-
       if (catResults == 0) {
         displayCatContainerParagraph();
       }
     }
-  
-  console.log(catBreeds);
-  console.log(catResults);
  
    //get where the cat cards container is going to go
   const cardContainer = document.getElementById("cardContainer");
 
-   
   catResults.map(cat =>{
     card =
      ` <div class="card">
