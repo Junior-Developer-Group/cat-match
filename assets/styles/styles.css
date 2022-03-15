@@ -320,6 +320,7 @@ option {
     /* 16px  */
     margin-top: 1em;
     margin-bottom: 1em;
+    cursor: pointer;
 }
 
 .hero-p {
