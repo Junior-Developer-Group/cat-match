@@ -1,9 +1,13 @@
 const catApi = "https://api.thecatapi.com/v1/breeds";
-const allcats = document.getElementById("allcats");
+const allcats = document.getElementById("all");
 const submitButton = document.querySelector(".submitButton");
 const form = document.getElementById("form");
 const allCatsButton = document.querySelector(".allCatsButton");
 const catcatParagraph = document.getElementById('catParagraph');
+
+const allSelectFields = document.getElementsByTagName('select');
+const allTickboxFields = document.getElementsByTagName('input');
+
 
 const loader = document.querySelector(".loader");
 let catResults;
@@ -103,6 +107,69 @@ submitButton.addEventListener("click", async (e) => {
     displayCatContainer();
 });
 
+function greyOutTheFields() {
+
+  // add disabled
+  for (let item of allSelectFields) {
+    
+    item.setAttribute('disabled',true);
+  }
+  for (let item of allTickboxFields) {
+
+    if(item.getAttribute('id') !== 'all') {
+      item.setAttribute('disabled', true);
+    }
+
+  }
+
+
+  // stop mouse from clicking
+  for (let item of allSelectFields) {
+    item.classList.add('cursor-not-allowed');
+  }
+
+  for (let item of allTickboxFields) {
+
+    if(item.getAttribute('id') !== 'all') {
+      item.classList.add('cursor-not-allowed');
+    }
+
+  }
+
+}
+
+function removeGreyFromTheFields() {
+
+  // remove disabled
+  for (let item of allSelectFields) {
+    item.removeAttribute('disabled')
+  }
+
+
+  for (let item of allTickboxFields) {
+    item.removeAttribute('disabled');
+  }
+
+
+   // allow mouse clicking
+   for (let item of allSelectFields) {
+    item.classList.remove('cursor-not-allowed');
+   }
+
+  for (let item of allTickboxFields) {
+    item.classList.remove('cursor-not-allowed');
+  }
+
+}
+
+function toggleDisabledClasses() {
+  if(allcats.checked) {
+    greyOutTheFields()
+  } else {
+    removeGreyFromTheFields();
+  }
+}
+
 
 
 function getUserInputs() {
@@ -123,7 +190,7 @@ function getUserInputs() {
 
 function resetSearchForm() {
   form.reset();
-
+  removeGreyFromTheFields();
 }
 
 

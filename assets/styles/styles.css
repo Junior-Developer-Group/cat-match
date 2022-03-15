@@ -27,6 +27,15 @@ body {
   color: var(--black);
 }
 
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-not-allowed[type=checkbox]:before {
+  border: 1px solid #a1a1a1;
+  cursor: not-allowed!important;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
