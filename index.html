@@ -10,8 +10,16 @@
     />
     <meta
       property="og:description"
-      content="Enter your requirements and get a list of matching cat breeds"
+      content="Find a perfect cat breed for yourself and your family by entering a few descriptive details into a simple form."
     />
+    <meta 
+    name="author" 
+    content="Junior Developer Group" 
+   />
+    <meta
+    name="description"
+    content="Find a perfect cat breed for yourself and your family by entering a few descriptive details into a simple form."
+  />
     <title>Cat-Match</title>
     <link
       rel="shortcut icon"
@@ -27,23 +35,19 @@
     <section class="hero-section">
       <h1 class="hero-heading">Cat Match</h1>
       <p class="hero-sub-heading">Find your perfect cat breed</p>
+
       <div class="hero-svg-section">
         <img src="./assets/images/person_cat_couch.svg" class="hero-svg" alt="person and cat sitting on a couch">
-        <button class="hero-button" onclick="window.open('#form', '_self')">Get started</button>
+        <button class="hero-button" onclick="window.open('#intro', '_self')">Get started</button>
       </div>
     </section>
 
-    <section class="intro">
+    <section class="intro" id="intro">
       <h2>Welcome to Cat Match!</h2>
       <p>
         Our Cat Match app will help you find the perfect cat breed for your home
         and lifestyle. Use the search form below, and Cat Match will suggest
         compatible breeds for you based on the Cat API.
-      </p>
-      <p>
-        Most of the options below are ranked on a scale of 1-4, with 4 being the
-        most. For example, if you have a small living space, you might want to
-        set "Activity" to 1 or 2, so the app will show you less-active breeds.
       </p>
     </section>
     <!-- Modal is the first child of body to allow keyboard-only users to use Shift + Tab to access other parts of their browser -->
@@ -58,29 +62,41 @@
           <a href="https://undraw.co/license">unDraw</a> - "Chilling" image,
           Copyright 2021 Katerina Limpitsouni
         </p>
+        <p>
+          <a href="https://commons.wikimedia.org/wiki/File:BrownVarientAsianCat.JPG">Wikimedia</a> - Malayan cat image, by
+          Scotia CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
+        </p>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Burmese_cat#/media/File:British_burmese_-_Andel_Alois_at_Cat_show.JPG">Wikimedia</a> - European Burmese cat image by Heikkisiltala, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons
+        <p>
+          <a href="https://unsplash.com/photos/3iL2rXnLjWU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Persian Cat</a> - Persian Cat Image by Petra Bouchalova on Unsplash
+        </p>
         <button class="toggle-modal" aria-label="close">Close</button>
       </div>
     </div>
 
     <form id="form" method="POST" action="">
       <h2>Find your perfect feline friend.</h2>
-      <fieldset>
-        <p class="allCatsSection">
-          I dont want to search, show me all the cat breeds.
-        </p>
-        <div class="showAllCatsButton">
-          <button class="allCatsButton" type="button">Show All Cats</button>
-        </div>
-      </fieldset>
-      <p class="formInstructions">
-        Choose your options based on your needs where: 1 = not very and 5 = very
+      <p class="hero-p">
+        Select the options that best match your lifestyle, for example if you have a small living space you might choose energy level to be "Lazy" and show cats that dont need as much excercise, or grooming to be "Very little" if you dont want to be brushing your cats fur daily.
       </p>
+      <p class="formInstructions">
+        Choose your options based on your needs: </p>
+
+    
+        <fieldset>
+          <legend>Show all cats</legend>
+          <div>
+            <label for="all"> Show me all the cat breeds</label>
+            <input type="checkbox" id="all" name="all"  onchange="toggleDisabledClasses()"/>
+          </div>
+        </fieldset>
       <fieldset>
         <legend>Fitting into your family</legend>
         <div>
           <label for="dogFriendly">Dog-friendly</label>
           <select id="dogFriendly" name="dogFriendly">
-            <option value="0"></option>
+            <option value="0">select</option>
             <option value="1">Not very friendly</option>
             <option value="2">Not friendly</option>
             <option value="3">Neutral</option>
@@ -96,21 +112,20 @@
       <fieldset>
         <legend>Fitting into your lifestyle</legend>
         <div>
-          <label for="coatLength">Coat Length</label>
-          <select id="coatLength" name="coatLength">
-            <option value="0"></option>
-            <option value="1">Too short</option>
-            <option value="2">Short</option>
-            <option value="3">Medium</option>
-            <option value="4">Long</option>
-            <option value="5">Too long</option>
+          <label for="grooming">Grooming</label>
+          <select id="grooming" name="grooming">
+            <option value="0">select</option>
+            <option value="1">Very Little</option>
+            <option value="2">A Bit</option>
+            <option value="3">weekly</option>
+            <option value="5">Every Day</option>
           </select>
         </div>
 
         <div>
           <label for="active">Energetic</label>
           <select id="active" name="active">
-            <option value="0"></option>
+            <option value="0">select</option>
             <option value="1">Too lazy</option>
             <option value="2">Lazy</option>
             <option value="3">Normal</option>
@@ -122,7 +137,7 @@
         <div>
           <label for="friendly">Friendliness</label>
           <select id="friendly" name="friendly">
-            <option value="0"></option>
+            <option value="0">select</option>
             <option value="1">Rudest</option>
             <option value="2">Rude</option>
             <option value="3">Neutral</option>
@@ -134,7 +149,7 @@
         <div>
           <label for="intelligence">Intelligence</label>
           <select id="intelligence" name="intelligence">
-            <option value="0"></option>
+            <option value="0">select</option>
             <option value="1">Not very intelligent</option>
             <option value="2">Not intelligent</option>
             <option value="3">Neutral</option>
@@ -152,15 +167,20 @@
         </div>
       </fieldset>
       <div class="submitButton">
-        <button type="submit">Search</button>
-        <button type="submit">Search again</button>
+        <button type="submit" id="submit">Search</button>
       </div>
+      
       <img
         class="loader"
         src="assets/images/cat-loader.gif"
         aria-expanded="false"
       />
     </form>
+
+    <div id="cardContainer">
+    </div>
+    
+    <p class="no-cat-paragraph" id="catParagraph"> No cats were found. Try searching again.</p>
 
     <footer>
       <button class="toggle-modal">Thank you</button>
@@ -178,11 +198,11 @@
       <small class="copyright">© Junior Developer Group, 2022</small>
     </footer>
     <div class="scroll-top-wrapper">
-      <a href="#top" class="scroll-top">Back to Top </a>
+      <a href="#submit" class="scroll-top"> <span class="arrow-up"></span> <span> Back to top </span> </a>
     </div>
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="assets/scripts/cat-api.js"></script>
+  <!-- <script src="assets/scripts/cat-api.js"></script> -->
   <script src="assets/scripts/index.js"></script>
   <script src="assets/scripts/modal.js"></script>
 </html>
